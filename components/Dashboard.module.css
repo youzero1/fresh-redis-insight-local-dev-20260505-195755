@@ -1,0 +1,176 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #0f1117;
+  color: #e2e8f0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 60px;
+  background: #1a1d27;
+  border-bottom: 1px solid #2d3748;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoIcon {
+  font-size: 22px;
+}
+
+.logoText {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fc4f4f;
+  letter-spacing: -0.3px;
+}
+
+.connectionBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.connected {
+  background: rgba(72, 199, 142, 0.15);
+  color: #48c78e;
+  border: 1px solid rgba(72, 199, 142, 0.3);
+}
+
+.disconnected {
+  background: rgba(255, 79, 79, 0.15);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 79, 79, 0.3);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+}
+
+.navBtn {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.navBtn:hover {
+  background: #2d3748;
+  color: #e2e8f0;
+}
+
+.navBtn.active {
+  background: rgba(252, 79, 79, 0.15);
+  border-color: rgba(252, 79, 79, 0.4);
+  color: #fc4f4f;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 280px;
+  min-width: 280px;
+  background: #1a1d27;
+  border-right: 1px solid #2d3748;
+  overflow-y: auto;
+}
+
+.content {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: calc(100vh - 60px);
+  gap: 12px;
+  color: #64748b;
+}
+
+.emptyIcon {
+  font-size: 64px;
+  opacity: 0.5;
+}
+
+.emptyState h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #94a3b8;
+}
+
+.emptyState p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.browserLayout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  height: calc(100vh - 60px);
+}
+
+.keyList {
+  width: 360px;
+  min-width: 360px;
+  border-right: 1px solid #2d3748;
+  overflow-y: auto;
+  background: #141720;
+}
+
+.keyDetail {
+  flex: 1;
+  overflow-y: auto;
+  background: #0f1117;
+}
